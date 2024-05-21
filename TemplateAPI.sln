@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateAPI.WebApi", "TemplateAPI\TemplateAPI.WebApi.csproj", "{05609B39-65BE-4CCA-B2F1-C078E7115F23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateAPI.WebApi", "TemplateAPI.WebApi\TemplateAPI.WebApi.csproj", "{05609B39-65BE-4CCA-B2F1-C078E7115F23}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateAPI.Service", "TemplateAPI.Service\TemplateAPI.Service.csproj", "{1E844CEF-D1C0-403B-882E-7834AD1AB6F9}"
 EndProject
