@@ -15,6 +15,7 @@
   <ItemGroup>
     <Folder Include="Connections\" />
     <Folder Include="Connections\" />
+    <Folder Include="Connections\" />
   </ItemGroup>
 
 </Project>

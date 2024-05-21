@@ -17,6 +17,10 @@
     <Folder Include="Interface\Repository\" />
     <Folder Include="Interface\Repository\" />
     <Folder Include="Entity\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Interface\" />
+    <Folder Include="ValueObjects\" />
+    <Folder Include="Service\" />
     <Folder Include="ValueObjects\" />
     <Folder Include="Service\" />
     <Folder Include="Service\" />

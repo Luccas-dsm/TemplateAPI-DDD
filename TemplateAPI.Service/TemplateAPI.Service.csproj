@@ -16,6 +16,9 @@
     <Folder Include="Dto\" />
     <Folder Include="Dto\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Service\" />
     <Folder Include="Service\" />
     <Folder Include="Service\" />
   </ItemGroup>
