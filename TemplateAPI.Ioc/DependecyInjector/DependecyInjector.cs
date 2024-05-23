@@ -14,7 +14,7 @@ namespace TemplateAPI.Ioc.DependecyInjector
         {
             AddService(service);
             AddDomain(service);
-            AddRepository(service,configuration);
+            AddRepository(service, configuration);
         }
 
         /// <summary>
