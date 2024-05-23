@@ -55,7 +55,7 @@ namespace TemplateAPI
             builder.Services.AddSwaggerConfiguration();
 
             //Injeções de dependencia do projeto IOC
-            builder.Services.AddDependencyInjectionConfiguration();
+            builder.Services.AddDependencyInjectionConfiguration(builder.Configuration);
 
             //Injeções do auto mapper
             builder.Services.AddDAutoMapperInjectionConfiguration();
