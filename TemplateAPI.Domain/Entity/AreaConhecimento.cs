@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TemplateAPI.Domain.Entity
 {
@@ -8,13 +9,15 @@ namespace TemplateAPI.Domain.Entity
 
         [Key]
         [Required]
+        [Column("seq_area_conhecimento")]
         public virtual long Seq { get; set; }
-
-        public virtual Nullable<long> SeqPai { get; set; }
 
         [Required]
         [StringLength(255)]
+        [Column("dsc_area_conhecimento")]
         public virtual string Descricao { get; set; }
+
+        /*public virtual Nullable<long> SeqPai { get; set; }
 
         [Required]
         public virtual System.DateTime DataInclusao { get; set; }
@@ -35,7 +38,7 @@ namespace TemplateAPI.Domain.Entity
         public virtual IList<AreaConhecimento> AreasConhecimentoFilhas { get; set; }
 
         public virtual AreaConhecimento AreaConhecimentoPai { get; set; }
-
+*/
         #endregion Navigation Properties
     }
 }

@@ -2,7 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TemplateAPI.Domain.Service;
 using TemplateAPI.Repository.ContextConfig;
+using TemplateAPI.Repository.Repository;
+using TemplateAPI.Service.Interfaces;
+using TemplateAPI.Service.Service;
 using TemplateAPI.Service.Validator.Base;
 
 namespace TemplateAPI.Ioc.DependecyInjector
@@ -23,7 +27,7 @@ namespace TemplateAPI.Ioc.DependecyInjector
         /// <param name="serviceCollection"></param>
         private static void AddService(IServiceCollection service)
         {
-
+            service.AddScoped<IAreaConhecimentoService, AreaConhecimentoService>();
         }
 
         /// <summary>
@@ -62,7 +66,10 @@ namespace TemplateAPI.Ioc.DependecyInjector
         /// <param name="serviceCollection"></param>
         private static void AddRepository(IServiceCollection service, IConfiguration Configuration)
         {
-            service.AddDbContext<TemplateDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyDbContext")));
+            var a = Configuration.GetConnectionString("Sql");
+            service.AddDbContext<TemplateDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Sql")));
+            service.AddScoped<IAreaConhecimentoRepository, AreaConhecimentoRepository>();
+
         }
 
     }

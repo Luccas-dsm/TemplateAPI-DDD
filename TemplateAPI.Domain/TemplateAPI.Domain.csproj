@@ -14,13 +14,8 @@
     <Folder Include="Interface\Entity\" />
     <Folder Include="Interface\Entity\" />
     <Folder Include="Interface\Repository\" />
-    <Folder Include="Interface\Repository\" />
-    <Folder Include="Interface\" />
     <Folder Include="ValueObjects\" />
-    <Folder Include="Service\" />
     <Folder Include="ValueObjects\" />
-    <Folder Include="Service\" />
-    <Folder Include="Service\" />
     <Folder Include="ValueObjects\" />
   </ItemGroup>
 
