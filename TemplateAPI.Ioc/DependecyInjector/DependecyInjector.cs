@@ -1,18 +1,18 @@
-﻿using FluentValidation.AspNetCore;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TemplateAPI.Service.Validator.Base;
 
 namespace TemplateAPI.Ioc.DependecyInjector
 {
     public class DependecyInjector
     {
 
-        public static void Register(IServiceCollection service)
+        public static void Register(IServiceCollection service, IConfiguration configuration)
         {
             AddService(service);
             AddDomain(service);
             AddRepository(service);
         }
+
 
         /// <summary>
         /// Injeções de dependencia relacionadas ao Service
@@ -30,10 +30,11 @@ namespace TemplateAPI.Ioc.DependecyInjector
         private static void AddDomain(IServiceCollection service)
         {
 
-
             #region[validators]
-            service.AddFluentValidationAutoValidation()
-                       .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining(typeof(ValidatorBase<>)));
+
+            //service.AddFluentValidationAutoValidation();
+            //service.AddFluentValidationClientsideAdapters();
+            //service.AddValidatorsFromAssemblyContaining(typeof(ValidatorBase<>));
 
             #endregion
         }

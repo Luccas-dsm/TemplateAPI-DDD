@@ -1,6 +1,6 @@
 ﻿using TemplateAPI.Service.Mapper;
 
-namespace TemplateAPI.Configuration
+namespace TemplateAPI.WebApi.Configurations
 {
     public static class AutoMapperInjectionConfig
     {

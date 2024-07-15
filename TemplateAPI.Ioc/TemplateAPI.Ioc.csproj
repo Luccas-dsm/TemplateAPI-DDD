@@ -7,15 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TemplateAPI.Domain\TemplateAPI.Domain.csproj" />
-    <ProjectReference Include="..\TemplateAPI.Repository\TemplateAPI.Repository.csproj" />
-    <ProjectReference Include="..\TemplateAPI.Service\TemplateAPI.Service.csproj" />
+    <Compile Remove="Connections\**" />
+    <EmbeddedResource Remove="Connections\**" />
+    <None Remove="Connections\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Connections\" />
-    <Folder Include="Connections\" />
-    <Folder Include="Connections\" />
+    <ProjectReference Include="..\TemplateAPI.Domain\TemplateAPI.Domain.csproj" />
+    <ProjectReference Include="..\TemplateAPI.Repository\TemplateAPI.Repository.csproj" />
+    <ProjectReference Include="..\TemplateAPI.Service\TemplateAPI.Service.csproj" />
   </ItemGroup>
 
 </Project>

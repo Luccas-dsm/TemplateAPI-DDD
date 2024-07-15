@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateAPI.Ioc", "Template
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateAPI.Repository", "TemplateAPI.Repository\TemplateAPI.Repository.csproj", "{8E2CF491-1634-43AB-8B7F-67E6E3887369}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateAPI.Tests", "TemplateAPI.Tests\TemplateAPI.Tests.csproj", "{65AD4682-2AA7-4CAD-B8D5-92607BEA5C42}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateAPI.Shared", "TemplateAPI.Shared\TemplateAPI.Shared.csproj", "{2E024C62-60F6-48B8-BC10-45E571EAC616}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED95A764-F189-4177-9A99-4B628EBFA683}"
@@ -48,10 +46,6 @@ Global
 		{8E2CF491-1634-43AB-8B7F-67E6E3887369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E2CF491-1634-43AB-8B7F-67E6E3887369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E2CF491-1634-43AB-8B7F-67E6E3887369}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65AD4682-2AA7-4CAD-B8D5-92607BEA5C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65AD4682-2AA7-4CAD-B8D5-92607BEA5C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65AD4682-2AA7-4CAD-B8D5-92607BEA5C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65AD4682-2AA7-4CAD-B8D5-92607BEA5C42}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E024C62-60F6-48B8-BC10-45E571EAC616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E024C62-60F6-48B8-BC10-45E571EAC616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E024C62-60F6-48B8-BC10-45E571EAC616}.Release|Any CPU.ActiveCfg = Release|Any CPU

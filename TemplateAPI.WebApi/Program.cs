@@ -1,7 +1,7 @@
+using TemplateAPI.WebApi.Configuration;
+using TemplateAPI.WebApi.Configurations;
 
-using TemplateAPI.Configuration;
-
-namespace TemplateAPI
+namespace TemplateAPI.WebApi
 {
     public class Program
     {
@@ -11,7 +11,7 @@ namespace TemplateAPI
 
             ConfigureServices(builder);
             AddConnections();
-            ConfigureApplication(builder.Build());
+            ConfigureApplication(builder.Build(), builder.Configuration);
         }
 
         /// <summary>
@@ -46,8 +46,8 @@ namespace TemplateAPI
         public static void ConfigureServices(WebApplicationBuilder builder)
         {
             // Add services to the container.
-
             builder.Services.AddControllers();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
 
@@ -55,28 +55,32 @@ namespace TemplateAPI
             builder.Services.AddSwaggerConfiguration();
 
             //Injeções de dependencia do projeto IOC
-            builder.Services.AddDependencyInjectionConfiguration();
+            builder.Services.AddDependencyInjectionConfiguration(builder.Configuration);
 
             //Injeções do auto mapper
             builder.Services.AddDAutoMapperInjectionConfiguration();
         }
 
         /// <summary>
-        /// Configuração do webApplication
+        /// Configuração do webApplication, descomente o que for necessário
         /// </summary>
         /// <param name="app"></param>
-        public static void ConfigureApplication(WebApplication app)
+        public static void ConfigureApplication(WebApplication app, IConfiguration configuration)
         {
-            // Configure the HTTP request pipeline.
+            // Mova para ca os metodos que só serão utilizados em ambiente de desenvolvimento. 
+            // Após configurar o Swagger mova app.UseSwaggerSetup(configuration); para dentro do if
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+
             }
 
-            app.UseHttpsRedirection();
+            app.UseSwaggerSetup(configuration);
 
-            app.UseAuthorization();
+            // app.UseCors("AllowAllOrigins");
+
+            // app.UseHttpsRedirection();
+
+            // app.UseAuthorization();
 
             app.MapControllers();
 
